@@ -1,7 +1,7 @@
 
 function inheritProperty(subType, superType) {
 	let prototype = object(superType.prototype);
-	let subType.prototype = prototype;
+	subType.prototype = prototype;
 	subType.prototype.constructor = subType;
 
 	function object(o) {
