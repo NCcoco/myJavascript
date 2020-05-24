@@ -13,6 +13,7 @@ function Rect() {
 	Shape.apply(this, arguments);
 }
 Rect.prototype = new Shape();
+Rect.prototype.addColor = function(color) {this.colors.push(color);}
 
 // use
 let a = new Rect();
