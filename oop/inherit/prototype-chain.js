@@ -16,9 +16,9 @@ Rect.prototype.addColor = function(color) {this.colors.push(color)}
 // use
 let a = new Rect();
 let b = new Rect();
-a.addColor("white")
+a.addColor("white");
 console.info(a.colors);
 console.info(b.colors);
 
-// 缺陷： 使用原型链继承将导致 Shape的colors变为共享对象
+// 缺陷： 使用原型链继承将导致 Shape的属性变为共享对象
 // 可以使用 借用构造函数继承解决这个问题
