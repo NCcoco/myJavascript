@@ -26,3 +26,20 @@ function insertAfter(newElement, targetElement) {
 		parent.insertBefore(newElement, targetElement.nextSibling);
 	}
 }
+
+/** 通过URL获取查询参数对象 */
+function getQueryStringArgs() {
+	let qs = window.location.search.length > 0 ? window.location.search.substring(1) : "";
+	
+	let args = {};
+	
+	let items = qs.length ? qs.split("&") : [];
+	
+	for(let i = 0; i < items.length; i ++) {
+		let item = items[i].split("=");
+		let name = decodeURIComponent( item[0]);
+		let value = decodeURIComponent( item[1]);
+		args[name] = value;
+	}
+	return args;
+}
